@@ -2,12 +2,13 @@
 .navContainer {
   height: 52px;
   width: 95%;
-  position: absolute;
+  position: fixed;
   display: flex; 
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.06);
   border-bottom: 1px solid rgb(1,51,31);
   padding: 0 25px;
+  z-index: 100;
 }
 
 .navItems {
