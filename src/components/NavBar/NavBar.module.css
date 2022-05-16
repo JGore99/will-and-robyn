@@ -1,0 +1,23 @@
+
+.navContainer {
+  height: 52px;
+  width: 95%;
+  position: absolute;
+  display: flex; 
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgb(1,51,31);
+  padding: 0 25px;
+}
+
+.navItems {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navText {
+  font-size: 14px;
+  font-weight: 400;
+}
