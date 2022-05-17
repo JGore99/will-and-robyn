@@ -15,14 +15,14 @@
   right: 0;
   bottom: 0;
   position: fixed;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 
 
 .modalContainer {
   background-color: rgb(255, 255, 255);
-  position: absolute;
+  position: fixed;
   top: 40%;
   left: 50%;
   right: auto;
@@ -34,5 +34,5 @@
   padding: 50px;
   max-width: 600px;
   min-width: 300px;
-  z-index: 1000;
+  z-index: 2000;
 }

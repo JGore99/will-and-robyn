@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 // import Modal from 'react-modal';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styles from './NavBar.module.css'
 import RSVPModal from "../RSVPModal/RSVPModal.jsx"
 
@@ -21,25 +21,17 @@ const NavBar = () => {
   return (
     <div className={styles.navContainer}>
       <ul className={styles.navItems}>
-        <li>
-            <Link to='/' >
-              <h3 className={styles.navText} >R+W</h3>
-            </Link>
+        <li className={styles.navItem}>
+            <NavLink exact to='/' className={styles.navText} activeClassName={styles.activeNavText}>R+W</NavLink>
         </li>
-        <li>
-            <Link to='/details' >
-              <h3 className={styles.navText} >Details</h3>
-            </Link>
+        <li className={styles.navItem}>
+            <NavLink to='/details' className={styles.navText} activeClassName={styles.activeNavText}>Details</NavLink>
         </li>
-        <li>
-            <Link to='/registry' >
-              <h3 className={styles.navText} >Registry</h3>
-            </Link>
+        <li className={styles.navItem}>
+          <NavLink to='/registry' className={styles.navText} activeClassName={styles.activeNavText}>Registry</NavLink>
         </li>
-        <li>
-            <Link to='/lodging' >
-              <h3 className={styles.navText} >Where to Stay</h3>
-            </Link>
+        <li className={styles.navItem}>
+            <NavLink to='/lodging' className={styles.navText} activeClassName={styles.activeNavText}>Where to Stay</NavLink>
         </li>
         <li>
             <button className="button-sm" onClick={() => {
