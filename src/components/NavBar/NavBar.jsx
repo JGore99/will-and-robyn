@@ -1,8 +1,23 @@
-import React from "react"
+import React, { useState } from "react"
+// import Modal from 'react-modal';
 import { Link } from 'react-router-dom'
 import styles from './NavBar.module.css'
+import RSVPModal from "../RSVPModal/RSVPModal.jsx"
 
 const NavBar = () => {
+
+  // Modal.setAppElement(RSVPModal)
+
+  const [modalIsOpen, setIsOpen] = useState(false)
+
+  // function openModal() {
+  //   setIsOpen(true);
+  // }
+ 
+  // function closeModal() {
+  //   setIsOpen(false);
+  // }
+
   return (
     <div className={styles.navContainer}>
       <ul className={styles.navItems}>
@@ -27,11 +42,16 @@ const NavBar = () => {
             </Link>
         </li>
         <li>
-            <button className="button-sm">
+            <button className="button-sm" onClick={() => {
+              setIsOpen(true)
+            }}>
               RSVP
             </button>
         </li>
       </ul>
+      {modalIsOpen && <RSVPModal isOpen={modalIsOpen}
+        closeModal={setIsOpen}
+        contentLabel="Example Modal"/>} 
     </div>
   )
 }

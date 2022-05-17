@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState } from "react"
 import styles from './Landing.module.css'
+import RSVPModal from "../../components/RSVPModal/RSVPModal"
 import and from '../../images/and.webp'
 import rW01 from '../../images/FullSizeR (2).jpg'
 import rW02 from '../../images/FullSizeR (3).jpg'
 import rW03 from '../../images/FullSizeR (4).jpg'
 
 const Landing = () => {
+
+  const [modalIsOpen, setIsOpen] = useState(false)
+
   return (
     <div className={styles.landingContainer}>
+      {modalIsOpen && <RSVPModal isOpen={modalIsOpen}
+        closeModal={setIsOpen}
+        contentLabel="Example Modal"/>} 
       <div className={styles.landingBackground}>
         <div className={styles.backgroundSphere}></div>
         <div className={styles.landingBackgroundSquares}>
@@ -27,7 +34,10 @@ const Landing = () => {
           <img className={styles.landingImagesm01} src={rW03} alt="photo03" />
           <img className={styles.landingImagesm02} src={rW01} alt="photo01"/>
         </div>
-          <button className='button-bg'>
+          <button className='button-bg' 
+            onClick={() => {
+              setIsOpen(true)
+          }}>
             RSVP
           </button>
       </div>

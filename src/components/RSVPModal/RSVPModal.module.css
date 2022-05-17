@@ -1,0 +1,38 @@
+.modalOverlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  height: 90%;
+  width: 90%; */
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+
+
+.modalContainer {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  margin-right: -50%;
+  /* height: 70%;
+  width: 70%; */
+  padding: 50px;
+  max-width: 600px;
+  min-width: 300px;
+  z-index: 1000;
+}
