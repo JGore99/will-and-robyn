@@ -110,6 +110,12 @@
 /*----------------------------MEDIA---------------------------------- */
 
 @media only screen and (max-width: 600px) {
+
+  .navContainer {
+    height: 5rem;
+    width: 95%;
+  }
+
   .hamburgerContainer {
     display: flex;
   }
@@ -140,13 +146,12 @@
   }
 
   .navItemsChecked {
-    border-left: 1px solid var(--dk-pink);
-    /* height: 95vh; */
     height: auto;
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
+    margin-top: 55px;
     width: 100%;
     z-index: 100;
     opacity: .97;
@@ -166,10 +171,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* height: 40px; */
-    padding: 3rem 1rem;
-    margin: 0;
+    padding: 30px 0;
+    margin: 0 25px;
     text-align: center;
+    border-top: 1px solid rgba(1,51,31, 0.4);
   }
 
   .navTextChecked {

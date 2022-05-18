@@ -57,7 +57,7 @@ const NavBar = () => {
         </li>
         <li className={
         checked ? styles.navItemChecked : styles.navItem}>
-            <button className={checked ? `button-bg` : `button-sm` }onClick={() => {
+            <button className={checked ? `button-hb` : `button-sm` }onClick={() => {
               setIsOpen(true)
             }}>
               RSVP
