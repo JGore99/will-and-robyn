@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styles from './Landing.module.css'
 import RSVPModal from "../../components/RSVPModal/RSVPModal"
-import and from '../../images/and.webp'
+import and from '../../images/and.png'
 import rW01 from '../../images/FullSizeR (2).jpg'
 import rW02 from '../../images/FullSizeR (3).jpg'
 import rW03 from '../../images/FullSizeR (4).jpg'

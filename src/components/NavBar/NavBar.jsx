@@ -1,40 +1,63 @@
 import React, { useState } from "react"
-// import Modal from 'react-modal';
 import { NavLink } from 'react-router-dom'
 import styles from './NavBar.module.css'
 import RSVPModal from "../RSVPModal/RSVPModal.jsx"
 
 const NavBar = () => {
 
-  // Modal.setAppElement(RSVPModal)
+  const [checked, setChecked] = useState(false)
+
+  const handleCheckBox = (e) => {
+    e.target.checked ? setChecked(true) : setChecked(false)
+  }
+
+  const closeHamburger = () => {
+    setChecked(false)
+  }
 
   const [modalIsOpen, setIsOpen] = useState(false)
 
-  // function openModal() {
-  //   setIsOpen(true);
-  // }
- 
-  // function closeModal() {
-  //   setIsOpen(false);
-  // }
-
   return (
-    <div className={styles.navContainer}>
-      <ul className={styles.navItems}>
-        <li className={styles.navItem}>
-            <NavLink exact to='/' className={styles.navText} activeClassName={styles.activeNavText}>R+W</NavLink>
+    <div 
+      className={
+      checked ? styles.navContainerChecked : styles.navContainer }
+    >
+      <div className={styles.hamburgerContainer}>
+        <input type='checkbox' 
+        checked={checked}
+          className={styles.toggler}
+          onChange={(e) => {
+            handleCheckBox(e)
+          }}
+        />
+        <div className={styles.hamburger}>
+          <div></div>
+        </div>
+      </div>
+      <ul className={
+        checked ? styles.navItemsChecked : styles.navItems }
+        onClick={() => {
+          closeHamburger()
+        }}>
+        <li className={
+        checked ? styles.navItemChecked : styles.navItem}>
+            <NavLink exact to='/' className={checked ? styles.navTextChecked : styles.navText } activeClassName={styles.activeNavText}>R+W</NavLink>
         </li>
-        <li className={styles.navItem}>
-            <NavLink to='/details' className={styles.navText} activeClassName={styles.activeNavText}>Details</NavLink>
+        <li className={
+        checked ? styles.navItemChecked : styles.navItem}>
+            <NavLink to='/details' className={checked ? styles.navTextChecked : styles.navText } activeClassName={styles.activeNavText}>Details</NavLink>
         </li>
-        <li className={styles.navItem}>
-          <NavLink to='/registry' className={styles.navText} activeClassName={styles.activeNavText}>Registry</NavLink>
+        <li className={
+        checked ? styles.navItemChecked : styles.navItem}>
+          <NavLink to='/registry' className={checked ? styles.navTextChecked : styles.navText } activeClassName={styles.activeNavText}>Registry</NavLink>
         </li>
-        <li className={styles.navItem}>
-            <NavLink to='/lodging' className={styles.navText} activeClassName={styles.activeNavText}>Where to Stay</NavLink>
+        <li className={
+        checked ? styles.navItemChecked : styles.navItem}>
+            <NavLink to='/lodging' className={checked ? styles.navTextChecked : styles.navText } activeClassName={styles.activeNavText}>Where to Stay</NavLink>
         </li>
-        <li>
-            <button className="button-sm" onClick={() => {
+        <li className={
+        checked ? styles.navItemChecked : styles.navItem}>
+            <button className={checked ? `button-bg` : `button-sm` }onClick={() => {
               setIsOpen(true)
             }}>
               RSVP
