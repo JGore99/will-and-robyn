@@ -15,7 +15,7 @@ function RSVPModal ( { closeModal }) {
     })
   }
 
-  const { fullName, numberOfGuests} = formData
+  const { fullName, numberOfGuests, commentsInstructions} = formData
 
   const isFormInvalid = () => {
     return !(fullName && numberOfGuests)
@@ -25,12 +25,12 @@ function RSVPModal ( { closeModal }) {
     <div className={`${styles.modalOverlay}`}>
       <div className={`${styles.modalContainer}`}>
         <h3 className={`${styles.modalTitle}`}>RSVP</h3>
-        <h4 className={`${styles.modalContent}`}>the wedding reception of</h4>
+        {/* <h4 className={`${styles.modalContent}`}>the wedding reception of</h4>
         <h4 className={`${styles.modalNames}`}>WILL & ROBYN</h4>
-        <h4 className={`${styles.modalTime}`}>00:00PM 00/00/2022</h4>
+        <h4 className={`${styles.modalTime}`}>SATURDAY, OCTOBER 22, 2022 AT 6:00 PM</h4>
         <h4 className={`${styles.modalLocation}`}>Fanfare</h4>
-        <h4 className={`${styles.modalAddress}`}>1103 Manhattan Ave, <br/>Brooklyn, NY 11222</h4>
-        <form
+        <h4 className={`${styles.modalAddress}`}>1103 Manhattan Ave, <br/>Brooklyn, NY 11222</h4> */}
+        <form className={`${styles.modalForm}`}
           autoComplete='off'
         >
           <label>Name
@@ -40,12 +40,37 @@ function RSVPModal ( { closeModal }) {
               name='name'
               onChange={handleChange}
             />
-          </label>
+          </label> 
+          <div className={`${styles.modalAttendingContainer}`}>Attending
+            <label>Yes
+              <input
+                type='radio'
+                value={true}
+                name='yes'
+                onChange={handleChange}
+                />
+            </label>
+            <label>No
+              <input
+                type='radio'
+                value={false}
+                name='no'
+                onChange={handleChange}
+                />
+            </label> 
+          </div> 
           <label>Number of guests
             <input
               type='number'
               value={numberOfGuests}
               name='number of guests'
+              onChange={handleChange}
+            />
+          </label>
+          <label>Comments / Special Instructions
+            <textarea
+              value={commentsInstructions}
+              name='comments'
               onChange={handleChange}
             />
           </label>
