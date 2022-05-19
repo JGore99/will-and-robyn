@@ -25,7 +25,7 @@
   /* border: 1px solid red; */
   border-radius: 50%;
   top: 0;
-  background-image: url('../../images/wr_background-01.webp');
+  background-image: var(--background-texture);
   z-index: 10;
 }
 
@@ -73,7 +73,7 @@
   max-height: 55px;
   width: auto;
   object-fit: cover;
-  margin: 1rem 0;
+  margin: .8rem 0;
 }
 
 .landingImageGrid {

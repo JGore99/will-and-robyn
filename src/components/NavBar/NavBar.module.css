@@ -27,7 +27,7 @@
 
 .navText {
   display: block;
-  font-size: 15px;
+  font-size: var(--font-m);
   letter-spacing: 0.1rem;
   line-height: 50px;
   text-align: center;
@@ -178,10 +178,7 @@
   }
 
   .navTextChecked {
-    font-size: 3rem;
+    font-size: var(--font-l);
   }
 
-  .navText {
-    font-size: 3rem;
-  }
 }

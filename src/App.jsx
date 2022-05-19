@@ -1,7 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
-import RSVPModal from './components/RSVPModal/RSVPModal'
 import Landing from './pages/Landing/Landing'
 import Details from './pages/Details/Details'
 import Registry from './pages/Registry/Registry'
