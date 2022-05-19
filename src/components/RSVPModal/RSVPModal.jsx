@@ -6,6 +6,8 @@ function RSVPModal ( { closeModal }) {
   const [formData, setFormData] = useState({
     fullName: '',
     numberOfGuests: null,
+    attending: true,
+    commentsInstructions: ''
   })
 
   const handleChange = e => {
@@ -15,10 +17,17 @@ function RSVPModal ( { closeModal }) {
     })
   }
 
-  const { fullName, numberOfGuests, commentsInstructions} = formData
+  const handleCheck = e => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const { fullName, numberOfGuests, attending, commentsInstructions} = formData
 
   const isFormInvalid = () => {
-    return !(fullName && numberOfGuests)
+    return !(fullName && attending)
   }
 
   return (
@@ -33,49 +42,52 @@ function RSVPModal ( { closeModal }) {
         <form className={`${styles.modalForm}`}
           autoComplete='off'
         >
-          <label>Name
-            <input
+          <label className={`${styles.modalFormLabel}`}>Name:
+            <input className={`${styles.modalFormInput}`}
               type='text'
+              required
               value={fullName}
-              name='name'
+              name='fullName'
               onChange={handleChange}
             />
           </label> 
-          <div className={`${styles.modalAttendingContainer}`}>Attending
-            <label>Yes
-              <input
+          <div className={`${styles.modalAttendingContainer}`}>
+            <h4 className={`${styles.modalAttendingLabel}`}>Attending?</h4>
+            <label className={`${styles.modalAttendingLabel}`}>Yes
+              <input className={`${styles.modalRadioBtn}`}
                 type='radio'
                 value={true}
-                name='yes'
-                onChange={handleChange}
+                name='attending'
+                onChange={handleCheck}
                 />
             </label>
-            <label>No
-              <input
+            <label className={`${styles.modalAttendingLabel}`}>No
+              <input className={`${styles.modalRadioBtn}`}
                 type='radio'
                 value={false}
-                name='no'
-                onChange={handleChange}
+                name='attending'
+                onChange={handleCheck}
                 />
             </label> 
           </div> 
-          <label>Number of guests
-            <input
+          <label className={`${styles.modalFormLabel}`}>Number of guests:
+            <input className={`${styles.modalFormInput}`}
               type='number'
+              required
               value={numberOfGuests}
               name='number of guests'
               onChange={handleChange}
             />
           </label>
-          <label>Comments / Special Instructions
-            <textarea
+          <label className={`${styles.modalFormLabel}`}>Comments / Special Instructions?
+            <textarea className={`${styles.modalFormInput} ${styles.modalTextArea}`}
               value={commentsInstructions}
               name='comments'
               onChange={handleChange}
             />
           </label>
         </form>
-      <button 
+      <button className="button-bg"
         disabled={isFormInvalid()}
         onClick={() => {
           closeModal(false)}}>Confirm

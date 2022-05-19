@@ -10,8 +10,6 @@
   z-index: 2000;
 }
 
-
-
 .modalContainer {
   background-color: rgb(255, 255, 255);
   border-radius: 4px;
@@ -24,8 +22,8 @@
   margin-right: -50%;
   /* height: 70%;
   width: 70%; */
-  padding: 50px;
-  max-width: 600px;
+  padding: 35px;
+  max-width: 500px;
   min-width: 300px;
   z-index: 2000;
   display: flex;
@@ -33,8 +31,78 @@
   align-items: center;
 }
 
+.modalTitle {
+  font-size: 30px;
+  font-weight: 300;
+  align-self: flex-start;
+  padding-bottom: 10px;
+}
+
 .modalForm {
-  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between; */
+  
+}
+
+.modalFormLabel {
+  text-align: left;
+  display: block;
+  font-size: var(--font-m);
+  line-height: 1.5em;
+  font-weight: 400;
+}
+
+
+.modalFormInput {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 6px 0 12px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.modalTextArea {
+  height: 180px;
+  resize: none
+}
+
+.modalFormInput:focus {
+  outline: none !important;
+  border-color: var(--light-green);
+  box-shadow: 0 0 10px var(--light-green);
+}
+
+.modalAttendingContainer {
+  display: flex;
+  justify-content: start;
+}
+
+.modalAttendingLabel {
+  text-align: left;
+  /* display: block; */
+  font-size: var(--font-m);
+  line-height: 1.5em;
+  font-weight: 400;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.modalRadioBtn {
+  margin-left: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .modalContainer {
+    top: 50%;
+    width: 95%;
+    height: 95%;
+    padding: 20px;
+  }
+
 }

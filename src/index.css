@@ -119,16 +119,6 @@ h2 {
   font-weight: 400;
 }
 
-label {
-  font-size: var(--font-m);
-  line-height: 1.5em;
-}
-
-textarea {
-    font-size: var(--font-m);
-    line-height: 1.5em;
-}
-
 @media only screen and (max-width: 600px) {
 
   h2 {
@@ -140,4 +130,8 @@ textarea {
     border-bottom: none;
   }
 
+  button:hover {
+    color: rgb(0,61,37);
+    background-color: var(--light-green);
+  }
 }

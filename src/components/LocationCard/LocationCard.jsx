@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styles from './LocationCard.module.css'
 
 const LodgingCard = ({ location, setLocationId }) => {
   return (
     <div className={`${styles.locationCard}`}>
       <h3 className={`${styles.locationName}`}>{location.name}</h3>
-      <h4 className={`${styles.locationTitle}`}>{location.web}</h4>
+      <Link to={{ pathname: `${location.link}`}} target="_blank" className={`${styles.locationTitle}`}>{location.web}</Link>
       <h4 className={`${styles.locationPhone}`}>{location.phone}</h4>
     </div>
   )
