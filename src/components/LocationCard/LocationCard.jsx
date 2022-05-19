@@ -6,7 +6,7 @@ const LodgingCard = ({ location, setLocationId }) => {
     <div className={`${styles.locationCard}`}>
       <h3 className={`${styles.locationName}`}>{location.name}</h3>
       <h4 className={`${styles.locationTitle}`}>{location.web}</h4>
-      <h4 className={`${styles.locationTitle}`}>{location.phone}</h4>
+      <h4 className={`${styles.locationPhone}`}>{location.phone}</h4>
     </div>
   )
 }

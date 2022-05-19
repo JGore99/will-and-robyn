@@ -6,7 +6,7 @@ import LodgingList from '../../components/LocationList/LocationList'
 const Lodging = () => {
   return (
     <div className={`${styles.lodgingContainer}`}>
-      <h1 className='pageTitle'>Where to stay</h1>
+      <h1 className='pageTitle'>Lodging Options</h1>
       <div className={`${styles.locationCardContainer}`}>
       {LodgingList.map((location, index) => {
         return (
