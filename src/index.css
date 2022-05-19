@@ -119,6 +119,16 @@ h2 {
   font-weight: 400;
 }
 
+label {
+  font-size: var(--font-m);
+  line-height: 1.5em;
+}
+
+textarea {
+    font-size: var(--font-m);
+    line-height: 1.5em;
+}
+
 @media only screen and (max-width: 600px) {
 
   h2 {
