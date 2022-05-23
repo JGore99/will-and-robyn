@@ -33,7 +33,7 @@ code {
   font-size: 62.5%;
   --font-tiny: 1.2rem;
   --font-xxs: 1.4rem;
-  --font-xs: 1.4rem;
+  --font-xs: 10px;
   --font-s: 12px;
   --font-m: 15px;
   --font-l: 35px;

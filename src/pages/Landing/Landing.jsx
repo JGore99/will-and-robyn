@@ -34,12 +34,13 @@ const Landing = () => {
           <img className={styles.landingImagesm01} src={rW03} alt="photo03" />
           <img className={styles.landingImagesm02} src={rW01} alt="photo01"/>
         </div>
-          <button className='button-bg' 
-            onClick={() => {
-              setIsOpen(true)
-          }}>
-            RSVP
-          </button>
+        <h4 className={styles.landingDetails}>SATURDAY, OCTOBER 22, 2022 <br/>6:00 PM<br/>IN BROOKLYN NY</h4>
+        <button className='button-bg' 
+          onClick={() => {
+            setIsOpen(true)
+        }}>
+          RSVP
+        </button>
       </div>
     </div>
   )

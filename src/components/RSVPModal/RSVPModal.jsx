@@ -42,7 +42,7 @@ function RSVPModal ( { closeModal }) {
         <form className={`${styles.modalForm}`}
           autoComplete='off'
         >
-          <label className={`${styles.modalFormLabel}`}>Name:
+          <label className={`${styles.modalFormLabel}`}>Name
             <input className={`${styles.modalFormInput}`}
               type='text'
               required
@@ -70,7 +70,7 @@ function RSVPModal ( { closeModal }) {
                 />
             </label> 
           </div> 
-          <label className={`${styles.modalFormLabel}`}>Number of guests:
+          <label className={`${styles.modalFormLabel}`}>Number of guests
             <input className={`${styles.modalFormInput}`}
               type='number'
               required
@@ -79,7 +79,7 @@ function RSVPModal ( { closeModal }) {
               onChange={handleChange}
             />
           </label>
-          <label className={`${styles.modalFormLabel}`}>Comments / Special Instructions?
+          <label className={`${styles.modalFormLabel}`}>Comments / Special Instructions
             <textarea className={`${styles.modalFormInput} ${styles.modalTextArea}`}
               value={commentsInstructions}
               name='comments'
@@ -91,6 +91,10 @@ function RSVPModal ( { closeModal }) {
         disabled={isFormInvalid()}
         onClick={() => {
           closeModal(false)}}>Confirm
+      </button>
+      <button className="button-bg"
+        onClick={() => {
+          closeModal(false)}}>Cancel
       </button>
       </div>
     </div>

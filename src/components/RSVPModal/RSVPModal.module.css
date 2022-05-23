@@ -52,9 +52,9 @@
 .modalFormLabel {
   text-align: left;
   display: block;
-  font-size: var(--font-m);
+  font-size: 16px;
   line-height: 1.5em;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 

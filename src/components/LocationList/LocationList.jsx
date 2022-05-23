@@ -37,13 +37,7 @@ const LodgingList = [
     name: "The Place",
     web: "bookings",
     phone: "555-555-5555"
-  },
-  {
-    id: 6,
-    name: "The Place",
-    web: "bookings",
-    phone: "555-555-5555"
-  },
+  }
 ]
 
 export default LodgingList
