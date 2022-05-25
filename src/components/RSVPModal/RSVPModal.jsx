@@ -92,9 +92,9 @@ function RSVPModal ( { closeModal }) {
         onClick={() => {
           closeModal(false)}}>Confirm
       </button>
-      <button className="button-bg"
+      <button className="button-sm"
         onClick={() => {
-          closeModal(false)}}>Cancel
+          closeModal(false)}}>Back
       </button>
       </div>
     </div>

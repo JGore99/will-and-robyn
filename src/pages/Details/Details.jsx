@@ -1,14 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Details.module.css'
-import leFanfarePhoto from '../../images/le_fanfare.png'
+// import Slideshow from '../../components/Slideshow/Slideshow'
+import LocationCarousel from '../../components/LocationCarousel/LocationCarousel.jsx'
 import { FaMapPin, FaInstagramSquare } from 'react-icons/fa'
 import { BiWorld } from 'react-icons/bi'
 
 const Details = () => {
   return (
     <div className={`${styles.detailsContainer}`}>
-      <img className={`${styles.detailsImage}`} src={leFanfarePhoto} alt="Le Fanfare" />
+      <LocationCarousel />
+      {/* <Slideshow /> */}
       <h4 className={`${styles.detailsTime}`}>DINNER &amp; DRINKS</h4>
       <h4 className={`${styles.detailsTime}`}>SATURDAY, OCTOBER 22, 2022 <br/>6:00 PM</h4>
       <h4 className={`${styles.detailsLocation}`}>LE FANFARE</h4>
