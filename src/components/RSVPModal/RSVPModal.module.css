@@ -82,19 +82,103 @@
   justify-content: flex-start;
 }
 
-.modalAttendingLabel {
+/* .modalAttendingLabel {
   text-align: left;
-  /* display: block; */
   font-size: var(--font-m);
   line-height: 1.5em;
   font-weight: 400;
   padding-right: 20px;
   padding-bottom: 10px;
+} */
+
+.modalRadioContainer {
+  display: flex;
+	margin-bottom: 36px;
+	/* overflow: hidden; */
+}
+
+/* .modalRadioContainer label {
+  background-color: #e4e4e4;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 14px;
+	line-height: 1;
+	text-align: center;
+	padding: 10px 12px;
+	margin-right: -1px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+	transition: all 0.1s ease-in-out;
+} */
+
+.radioYes {
+  background-color: #e4e4e4;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 14px;
+	line-height: 1;
+	text-align: center;
+	padding: 10px 12px;
+	margin-right: -1px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+	transition: all 0.1s ease-in-out;
+  border-radius: 50% 0 0 50%;
+}
+
+.radioYesChecked {
+  background-color: #a5dc86;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 14px;
+	line-height: 1;
+	text-align: center;
+	padding: 10px 12px;
+	margin-right: -1px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+	transition: all 0.1s ease-in-out;
+  border-radius: 50% 0 0 50%;
+}
+
+.radioNo {
+  background-color: #e4e4e4;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 14px;
+	line-height: 1;
+	text-align: center;
+	padding: 10px 12px;
+	margin-right: -1px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+	transition: all 0.1s ease-in-out;
+  border-radius: 0 50% 50% 0;
+}
+
+.radioNoChecked {
+  background-color: #a5dc86;
+	box-shadow: none;
+  color: rgba(0, 0, 0, 0.6);
+	font-size: 14px;
+	line-height: 1;
+	text-align: center;
+	padding: 10px 12px;
+	margin-right: -1px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	transition: all 0.1s ease-in-out;
+  border-radius: 0 50% 50% 0;
 }
 
 .modalRadioBtn {
-  margin-left: 2px;
+  position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
 }
+
+/* .modalRadioBtn:checked + .modalRadioLabel {
+	background-color: #a5dc86;
+	box-shadow: none;
+} */
 
 @media only screen and (max-width: 600px) {
 
