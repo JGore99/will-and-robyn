@@ -22,8 +22,8 @@
   margin-right: -50%;
   /* height: 70%;
   width: 70%; */
-  padding: 35px;
-  max-width: 500px;
+  padding: 30px;
+  width: 400px;
   min-width: 300px;
   z-index: 2000;
   display: flex;
@@ -51,35 +51,50 @@
 
 .modalFormLabel {
   text-align: left;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 16px;
   line-height: 1.5em;
   font-weight: 600;
+  margin-right: 8px;
+  width: 100%;
 }
 
-
 .modalFormInput {
-  width: 100%;
+  width: 85%;
   padding: 6px 10px;
-  margin: 6px 0 12px 0;
+  margin: 18px 0px 18px 8px;
   border: 1px solid #ddd;
   box-sizing: border-box;
 }
 
 .modalTextArea {
   height: 180px;
-  resize: none
+  resize: none;
+  width: 100%;
+  margin: 10px 0;
 }
 
-.modalFormInput:focus {
+.modalFormInput:focus, 
+.modalGuestInput:focus{
   outline: none !important;
   border-color: var(--light-green);
   box-shadow: 0 0 10px var(--light-green);
 }
 
+.attendingGuestsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
 .modalAttendingContainer {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* .modalAttendingLabel {
@@ -93,7 +108,8 @@
 
 .modalRadioContainer {
   display: flex;
-	margin-bottom: 36px;
+  justify-content: space-between;
+  width: 81px;
 	/* overflow: hidden; */
 }
 
@@ -116,12 +132,13 @@
 	font-size: 14px;
 	line-height: 1;
 	text-align: center;
-	padding: 10px 12px;
+	padding: 10px 0;
+  width: 40px;
 	margin-right: -1px;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
 	transition: all 0.1s ease-in-out;
-  border-radius: 50% 0 0 50%;
+  border-radius: 40% 0 0 40%;
 }
 
 .radioYesChecked {
@@ -130,12 +147,13 @@
 	font-size: 14px;
 	line-height: 1;
 	text-align: center;
-	padding: 10px 12px;
+	padding: 10px 0;
+  width: 40px;
 	margin-right: -1px;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
 	transition: all 0.1s ease-in-out;
-  border-radius: 50% 0 0 50%;
+  border-radius: 40% 0 0 40%;
 }
 
 .radioNo {
@@ -144,26 +162,28 @@
 	font-size: 14px;
 	line-height: 1;
 	text-align: center;
-	padding: 10px 12px;
+	padding: 10px 0;
+  width: 40px;
 	margin-right: -1px;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
 	transition: all 0.1s ease-in-out;
-  border-radius: 0 50% 50% 0;
+  border-radius: 0 40% 40% 0;
 }
 
 .radioNoChecked {
-  background-color: #a5dc86;
+  background-color: #dc8686;
 	box-shadow: none;
   color: rgba(0, 0, 0, 0.6);
 	font-size: 14px;
 	line-height: 1;
 	text-align: center;
-	padding: 10px 12px;
+	padding: 10px 0;
+  width: 40px;
 	margin-right: -1px;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	transition: all 0.1s ease-in-out;
-  border-radius: 0 50% 50% 0;
+  border-radius: 0 40% 40% 0;
 }
 
 .modalRadioBtn {
@@ -172,13 +192,46 @@
 	height: 1px;
 	width: 1px;
 	border: 0;
-	overflow: hidden;
 }
 
+.modalGuestLabel {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 600;
+  word-wrap: none;
+  margin-top: 20px;
+}
+
+.modalGuestInput {
+  padding: 6px 10px;
+  margin: 0 0 0 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  width: 60px;
+}
 /* .modalRadioBtn:checked + .modalRadioLabel {
 	background-color: #a5dc86;
 	box-shadow: none;
 } */
+
+.modalSpecialLabel {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 18px;
+  text-align: left;
+}
 
 @media only screen and (max-width: 600px) {
 
@@ -186,7 +239,7 @@
     top: 50%;
     width: 95%;
     height: 95%;
-    padding: 20px;
+    padding: 25px;
   }
 
 }

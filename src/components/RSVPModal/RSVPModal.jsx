@@ -9,7 +9,7 @@ function RSVPModal ( { closeModal }) {
   const [formData, setFormData] = useState({
     fullName: '',
     numberOfGuests: null,
-    attending: true,
+    attending: '',
     commentsInstructions: ''
   })
 
@@ -64,48 +64,50 @@ function RSVPModal ( { closeModal }) {
               onChange={handleChange}
             />
           </label> 
-          <div className={styles.modalAttendingContainer}>
-            <h4 className={styles.modalFormLabel}>Attending?</h4>
-            <div className={styles.modalRadioContainer}>
-              <label className={
-                yesChecked ? `${styles.radioYesChecked}` : `${styles.radioYes} `}
-              >Yes
-                <input className={styles.modalRadioBtn}
-                  type='radio'
-                  value={true}
-                  name='attending'
-                  onChange={(e) => {
-                    handleCheck(e)
-                    handleYes(e)
-                  }}
-                  />
-              </label>
-              <label className={
-                noChecked ? `${styles.radioNoChecked}` : `${styles.radioNo} `}>No
-                <input className={styles.modalRadioBtn}
-                  type='radio'
-                  value={false}
-                  setNoChecked={true}
-                  setYesChecked={false}
-                  name='attending'
-                  onChange={(e) => {
-                    handleCheck(e)
-                    handleNo(e)
-                  }}
-                  />
-              </label> 
-            </div>
-          </div> 
-          <label className={styles.modalFormLabel}>Number of guests
-            <input className={styles.modalFormInput}
-              type='number'
-              required
-              value={numberOfGuests}
-              name='number of guests'
-              onChange={handleChange}
-            />
-          </label>
-          <label className={styles.modalFormLabel}>Comments / Special Instructions
+          <div className={styles.attendingGuestsContainer}>
+            <div className={styles.modalAttendingContainer}>
+              <h4 className={styles.modalFormLabel}>Attending?</h4>
+              <div className={styles.modalRadioContainer}>
+                <label className={
+                  yesChecked ? `${styles.radioYesChecked}` : `${styles.radioYes} `}
+                >Yes
+                  <input className={styles.modalRadioBtn}
+                    type='radio'
+                    value={true}
+                    name='attending'
+                    onChange={(e) => {
+                      handleCheck(e)
+                      handleYes(e)
+                    }}
+                    />
+                </label>
+                <label className={
+                  noChecked ? `${styles.radioNoChecked}` : `${styles.radioNo} `}>No
+                  <input className={styles.modalRadioBtn}
+                    type='radio'
+                    value={false}
+                    setNoChecked={true}
+                    setYesChecked={false}
+                    name='attending'
+                    onChange={(e) => {
+                      handleCheck(e)
+                      handleNo(e)
+                    }}
+                    />
+                </label> 
+              </div>
+            </div> 
+            <label className={styles.modalGuestLabel}>Number of guests
+              <input className={styles.modalGuestInput}
+                type='number'
+                required
+                value={numberOfGuests}
+                name='number of guests'
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <label className={styles.modalSpecialLabel}>Comments / Special Instructions
             <textarea className={`${styles.modalFormInput} ${styles.modalTextArea}`}
               value={commentsInstructions}
               name='comments'
