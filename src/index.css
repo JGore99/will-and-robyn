@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: rgb(0,61,37);
   background-color: rgba(255, 255, 255, 1);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 main {
@@ -15,7 +15,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  /* width: 100%; */
 }
 
 code {
