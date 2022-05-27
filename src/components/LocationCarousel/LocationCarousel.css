@@ -1,6 +1,12 @@
-/* .carousel-control-prev-icon {
-  height: 100px;
-  width: auto;
-  background-color: white;
-  background-image: none;
-} */
+.carousel-control-prev-icon, 
+.carousel-control-next-icon{
+  height: 40px;
+  Width: 40px;
+  filter: brightness(0) saturate(100%) invert(98%) sepia(59%) saturate(132%) hue-rotate(120deg) brightness(117%) contrast(100%);
+}
+
+.carouselImages {
+  -webkit-filter: grayscale(90%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(90%);
+}
+

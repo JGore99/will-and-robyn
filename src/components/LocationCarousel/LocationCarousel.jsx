@@ -16,35 +16,35 @@ const LocationCarousel = () => {
       <Carousel> 
       <Carousel.Item interval={null} slide={true} touch={true}>
           <img
-            className="d-block w-100"
+            className={"d-block w-100 carouselImages"}
             src={LeFanfare01}
             alt="First slide"
           />
         </Carousel.Item>
         <Carousel.Item interval={null} slide={true} touch={true}>
           <img
-            className="d-block w-100"
+            className="d-block w-100 carouselImages"
             src={LeFanfare02}
             alt="Second slide"
           />
         </Carousel.Item>
         <Carousel.Item interval={null} slide={true} touch={true}>
           <img
-            className="d-block w-100"
+            className="d-block w-100 carouselImages"
             src={LeFanfare03}
             alt="Third slide"
           />
         </Carousel.Item>
         <Carousel.Item interval={null} slide={true} touch={true}>
           <img
-            className="d-block w-100"
+            className="d-block w-100 carouselImages"
             src={LeFanfare04}
             alt="Fourth slide"
           />
         </Carousel.Item>
         <Carousel.Item interval={null} slide={true} touch={true}>
           <img
-            className="d-block w-100"
+            className="d-block w-100 carouselImages"
             src={LeFanfare05}
             alt="Fifth slide"
           />

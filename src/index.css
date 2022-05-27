@@ -43,7 +43,7 @@ code {
   --light-green: rgb(150,163,153);
   --dark-green: rgb(0,61,37);
   --dark-green-transp: rgba(1,51,31, 0.4);
-  --background-texture: url('./images/wr_background-01.webp');
+  --background-texture: url('./images/wr_background-02.webp');
 }
 
 a:link {
