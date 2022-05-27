@@ -64,7 +64,7 @@
 .modalFormInput {
   width: 85%;
   padding: 6px 10px;
-  margin: 18px 0px 18px 8px;
+  margin: 18px 0px 18px 12px;
   border: 1px solid #ddd;
   box-sizing: border-box;
 }
@@ -229,7 +229,7 @@
   line-height: 1.5em;
   font-weight: 600;
   width: 100%;
-  margin-top: 18px;
+  margin: 18px 0;
   text-align: left;
 }
 
