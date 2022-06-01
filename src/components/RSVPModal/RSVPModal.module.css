@@ -14,14 +14,14 @@
   background-color: rgb(255, 255, 255);
   border-radius: 4px;
   position: fixed;
-  top: 40%;
+  top: 60px;
   left: 50%;
   right: auto;
   bottom: auto;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   margin-right: -50%;
-  /* height: 70%;
-  width: 70%; */
+  height: 95vh;
+  /* width: 70%; */
   padding: 30px;
   width: 400px;
   min-width: 300px;
@@ -29,6 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: auto;
 }
 
 .modalTitle {
@@ -51,26 +52,27 @@
 
 .modalFormLabel {
   text-align: left;
-  display: flex;
+  /* display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; */
   font-size: 16px;
   line-height: 1.5em;
   font-weight: 600;
-  margin-right: 8px;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .modalFormInput {
-  width: 85%;
+  width: 100%;
   padding: 6px 10px;
-  margin: 18px 0px 18px 12px;
+  margin-top: 10px;
   border: 1px solid #ddd;
   box-sizing: border-box;
 }
 
 .modalTextArea {
-  height: 180px;
+  height: 160px;
   resize: none;
   width: 100%;
   margin: 10px 0;
@@ -85,31 +87,30 @@
 
 .attendingGuestsContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
+  justify-content: space-between;
+  /* flex-direction: column; */
   width: 100%;
 }
 
-.modalAttendingContainer {
+/* .modalAttendingContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-/* .modalAttendingLabel {
-  text-align: left;
-  font-size: var(--font-m);
-  line-height: 1.5em;
-  font-weight: 400;
-  padding-right: 20px;
-  padding-bottom: 10px;
 } */
+
+.modalAttendingLabel {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 600;
+  width: 100%;
+}
 
 .modalRadioContainer {
   display: flex;
   justify-content: space-between;
   width: 81px;
+  margin-top: 10px;
 	/* overflow: hidden; */
 }
 
@@ -195,24 +196,22 @@
 }
 
 .modalGuestLabel {
-  width: 100%;
   text-align: left;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   font-size: 16px;
   line-height: 1.5em;
   font-weight: 600;
   word-wrap: none;
-  margin-top: 20px;
 }
 
 .modalGuestInput {
   padding: 6px 10px;
-  margin: 0 0 0 8px;
+  margin-top: 10px;
   border: 1px solid #ddd;
   box-sizing: border-box;
-  width: 60px;
+  width: 140px;
 }
 /* .modalRadioBtn:checked + .modalRadioLabel {
 	background-color: #a5dc86;
@@ -233,12 +232,24 @@
   text-align: left;
 }
 
+.closeModal {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  height: 40px;
+  width: 40px;
+  border-radius: 4px;
+  box-shadow: 0px 3px 3px 0px rgba(78, 78, 78, 0.3);
+}
+
 @media only screen and (max-width: 600px) {
 
   .modalContainer {
-    top: 50%;
+    top: 2%;
     width: 95%;
-    height: 95%;
+    max-height: 100%;
     padding: 25px;
   }
 

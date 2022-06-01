@@ -1,4 +1,4 @@
-import LeFanfare01 from '../../images/le_fanfare01a.png'
+import LeFanfare01 from '../../images/le_fanfare01.png'
 import LeFanfare02 from '../../images/le_fanfare02.png'
 import LeFanfare03 from '../../images/le_fanfare03.png'
 import LeFanfare04 from '../../images/le_fanfare04.png'

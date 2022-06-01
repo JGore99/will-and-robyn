@@ -13,7 +13,7 @@ import LeFanfare05 from '../../images/le_fanfare05.png'
 const LocationCarousel = () => { 
   return (
     <div>
-      <Carousel> 
+      <Carousel interval={null} > 
       <Carousel.Item interval={null} slide={true} touch={true}>
           <img
             className={"d-block w-100 carouselImages"}

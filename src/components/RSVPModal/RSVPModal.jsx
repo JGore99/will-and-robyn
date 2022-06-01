@@ -66,7 +66,7 @@ function RSVPModal ( { closeModal }) {
           </label> 
           <div className={styles.attendingGuestsContainer}>
             <div className={styles.modalAttendingContainer}>
-              <h4 className={styles.modalFormLabel}>Attending?</h4>
+              <h4 className={styles.modalAttendingLabel}>Attending?</h4>
               <div className={styles.modalRadioContainer}>
                 <label className={
                   yesChecked ? `${styles.radioYesChecked}` : `${styles.radioYes} `}
@@ -120,9 +120,9 @@ function RSVPModal ( { closeModal }) {
         onClick={() => {
           closeModal(false)}}>Confirm
       </button>
-      <button className="button-sm"
+    <button className={styles.closeModal}
         onClick={() => {
-          closeModal(false)}}>Back
+          closeModal(false)}}>X
       </button>
       </div>
     </div>
