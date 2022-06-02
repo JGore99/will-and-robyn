@@ -5,6 +5,7 @@ function RSVPModal ( { closeModal }) {
 
   const [yesChecked, setYesChecked] = useState(false)
   const [noChecked, setNoChecked] = useState(false)
+  const [btnDisabled, setBtnDisabled] = useState(true)
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -40,18 +41,20 @@ function RSVPModal ( { closeModal }) {
   const { fullName, numberOfGuests, attending, commentsInstructions} = formData
 
   const isFormInvalid = () => {
-    return !(fullName && attending)
+    // if (fullName && attending){
+    //   setBtnDisabled(false)
+    //   return (fullName && attending )
+    // } else {
+    //   setBtnDisabled(true)
+    //   return !(fullName && attending )
+    // }
+    return !(fullName && attending )
   }
 
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalContainer}>
         <h3 className={styles.modalTitle}>RSVP</h3>
-        {/* <h4 className={`${styles.modalContent}`}>the wedding reception of</h4>
-        <h4 className={`${styles.modalNames}`}>WILL & ROBYN</h4>
-        <h4 className={`${styles.modalTime}`}>SATURDAY, OCTOBER 22, 2022 AT 6:00 PM</h4>
-        <h4 className={`${styles.modalLocation}`}>Fanfare</h4>
-        <h4 className={`${styles.modalAddress}`}>1103 Manhattan Ave, <br/>Brooklyn, NY 11222</h4> */}
         <form className={styles.modalForm}
           autoComplete='off'
         >
@@ -102,7 +105,7 @@ function RSVPModal ( { closeModal }) {
                 type='number'
                 required
                 value={numberOfGuests}
-                name='number of guests'
+                name='numberOfGuests'
                 onChange={handleChange}
               />
             </label>
@@ -110,7 +113,7 @@ function RSVPModal ( { closeModal }) {
           <label className={styles.modalSpecialLabel}>Comments / Special Instructions
             <textarea className={`${styles.modalFormInput} ${styles.modalTextArea}`}
               value={commentsInstructions}
-              name='comments'
+              name='commentsInstructions'
               onChange={handleChange}
             />
           </label>
@@ -120,7 +123,10 @@ function RSVPModal ( { closeModal }) {
         onClick={() => {
           closeModal(false)}}>Confirm
       </button>
-    <button className={styles.closeModal}
+      {/* className={disabled ? "button-ds" : "button-bg" } */}
+
+    <button 
+    className={styles.closeModal}
         onClick={() => {
           closeModal(false)}}>X
       </button>

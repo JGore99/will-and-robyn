@@ -19,10 +19,17 @@
 
 @media only screen and (max-width: 600px) {
 
+  .lodgingContainer {
+    width: 100%;
+    height: 100%;
+    margin-top: 65px;
+  }
+  
+
   .locationCardContainer {
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 1.5rem; 
+    margin-top: 5px; 
     padding: 0;
   }
 }

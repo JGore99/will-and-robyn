@@ -64,11 +64,11 @@
 @media only screen and (max-width: 600px) {
 
   .detailsContainer {
-    width: 95%;
+    width: 100%;
     position: absolute;
-    padding: 12px 12px 0;
-    margin: 0px 12px 12px;
-    top: 80px;
+    padding: 22px 12px 0;
+    margin: 0px;
+    top: 60px;
     bottom: 0px;
   }
   
