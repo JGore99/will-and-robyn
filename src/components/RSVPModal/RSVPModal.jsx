@@ -5,7 +5,7 @@ function RSVPModal ( { closeModal }) {
 
   const [yesChecked, setYesChecked] = useState(false)
   const [noChecked, setNoChecked] = useState(false)
-  const [btnDisabled, setBtnDisabled] = useState(true)
+  const [btnPressed, setBtnPressed] = useState(false)
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -38,17 +38,24 @@ function RSVPModal ( { closeModal }) {
     setNoChecked(true)
   }
 
+const handleFormSubmit = (e) => {
+  if (isFormValid()){
+    closeModal(false)
+  } else {
+    setBtnPressed(true)
+
+  }
+}
+
   const { fullName, numberOfGuests, attending, commentsInstructions} = formData
 
-  const isFormInvalid = () => {
-    // if (fullName && attending){
-    //   setBtnDisabled(false)
-    //   return (fullName && attending )
-    // } else {
-    //   setBtnDisabled(true)
-    //   return !(fullName && attending )
-    // }
-    return !(fullName && attending )
+  const isFormValid = () => {
+    console.log("WORKING??", fullName, attending, numberOfGuests)
+    if (fullName && attending && numberOfGuests){
+      return true
+    } else {
+      return false
+    }
   }
 
   return (
@@ -59,6 +66,9 @@ function RSVPModal ( { closeModal }) {
           autoComplete='off'
         >
           <label className={styles.modalFormLabel}>Name
+            <h4 className={
+              btnPressed && !fullName ? styles.promptShown : styles.promptHidden }>*required
+            </h4>
             <input className={styles.modalFormInput}
               type='text'
               required
@@ -70,6 +80,9 @@ function RSVPModal ( { closeModal }) {
           <div className={styles.attendingGuestsContainer}>
             <div className={styles.modalAttendingContainer}>
               <h4 className={styles.modalAttendingLabel}>Attending?</h4>
+              <h4 className={
+                btnPressed && !attending ? styles.promptShown : styles.promptHidden }>*required
+              </h4>
               <div className={styles.modalRadioContainer}>
                 <label className={
                   yesChecked ? `${styles.radioYesChecked}` : `${styles.radioYes} `}
@@ -101,6 +114,9 @@ function RSVPModal ( { closeModal }) {
               </div>
             </div> 
             <label className={styles.modalGuestLabel}>Number of guests
+              <h4 className={
+                btnPressed && !numberOfGuests ? styles.promptShown : styles.promptHidden }>*required
+              </h4>
               <input className={styles.modalGuestInput}
                 type='number'
                 required
@@ -119,9 +135,9 @@ function RSVPModal ( { closeModal }) {
           </label>
         </form>
       <button className="button-bg"
-        disabled={isFormInvalid()}
         onClick={() => {
-          closeModal(false)}}>Confirm
+          handleFormSubmit()
+          }}>Confirm
       </button>
       {/* className={disabled ? "button-ds" : "button-bg" } */}
 
