@@ -66,24 +66,23 @@ const handleFormSubmit = (e) => {
           autoComplete='off'
         >
           <label className={styles.modalFormLabel}>Name
-            <h4 className={
-              btnPressed && !fullName ? styles.promptShown : styles.promptHidden }>*required
-            </h4>
-            <input className={styles.modalFormInput}
+            <input className={
+              btnPressed && !fullName ? styles.promptFormInput : styles.modalFormInput }
               type='text'
               required
               value={fullName}
               name='fullName'
               onChange={handleChange}
             />
+            <h4 className={
+              btnPressed && !fullName ? styles.promptShown : styles.promptHidden }>*required
+            </h4>
           </label> 
           <div className={styles.attendingGuestsContainer}>
             <div className={styles.modalAttendingContainer}>
               <h4 className={styles.modalAttendingLabel}>Attending?</h4>
-              <h4 className={
-                btnPressed && !attending ? styles.promptShown : styles.promptHidden }>*required
-              </h4>
-              <div className={styles.modalRadioContainer}>
+              <div className={
+                btnPressed && !attending ? styles.promptRadioContainer : styles.modalRadioContainer }>
                 <label className={
                   yesChecked ? `${styles.radioYesChecked}` : `${styles.radioYes} `}
                 >Yes
@@ -112,19 +111,25 @@ const handleFormSubmit = (e) => {
                     />
                 </label> 
               </div>
-            </div> 
-            <label className={styles.modalGuestLabel}>Number of guests
               <h4 className={
-                btnPressed && !numberOfGuests ? styles.promptShown : styles.promptHidden }>*required
+                btnPressed && !attending ? styles.promptShown : styles.promptHidden }>*required
               </h4>
-              <input className={styles.modalGuestInput}
-                type='number'
-                required
-                value={numberOfGuests}
-                name='numberOfGuests'
-                onChange={handleChange}
-              />
-            </label>
+            </div> 
+            <div className={styles.numOfGuestsContainer}>
+              <label className={styles.modalGuestLabel}>Number of guests
+                <input className={
+                  btnPressed && !numberOfGuests ? styles.promptFormInput : styles.modalFormInput }
+                  type='number'
+                  required
+                  value={numberOfGuests}
+                  name='numberOfGuests'
+                  onChange={handleChange}
+                />
+                <h4 className={
+                  btnPressed && !numberOfGuests ? styles.promptShown : styles.promptHidden }>*required
+                </h4>
+              </label>
+            </div>
           </div>
           <label className={styles.modalSpecialLabel}>Comments / Special Instructions
             <textarea className={`${styles.modalFormInput} ${styles.modalTextArea}`}

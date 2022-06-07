@@ -40,16 +40,16 @@
 }
 
 .promptHidden {
+  font-size: 12px;
   visibility: hidden;
+  margin: 0;
 }
 
 .promptShown {
   font-size: 12px;
   color:rgb(253, 46, 46);
   visibility: visible;
-  grid-column: 2 / 3;
   margin: 0;
-  align-self: flex-end;
 }
 
 .modalForm {
@@ -65,13 +65,6 @@
 
 .modalFormLabel {
   text-align: left;
-  display: grid;
-  grid-template-columns: 50px 1fr 1fr 1fr;
-  grid-template-rows: 20px auto;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start; */
   font-size: 16px;
   line-height: 1.5em;
   font-weight: 600;
@@ -82,8 +75,18 @@
 .modalFormInput {
   width: 100%;
   padding: 6px 10px;
-  margin-top: 10px;
+  margin: 10px 0;
   border: 1px solid #ddd;
+  box-sizing: border-box;
+  grid-column: 1 / 5;
+}
+
+.promptFormInput {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  background-color:rgb(245, 244, 244);
+  border: 1px solid rgb(253, 46, 46);
   box-sizing: border-box;
   grid-column: 1 / 5;
 }
@@ -109,14 +112,15 @@
   width: 100%;
 }
 
-/* .modalAttendingContainer {
+.modalAttendingContainer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-} */
+}
 
 .modalAttendingLabel {
-  text-align: left;
+  text-align: center;
   font-size: 16px;
   line-height: 1.5em;
   font-weight: 600;
@@ -126,9 +130,21 @@
 .modalRadioContainer {
   display: flex;
   justify-content: space-between;
-  width: 81px;
-  margin-top: 10px;
-	/* overflow: hidden; */
+  width: 88px;
+  height: 42PX;
+  padding: 2px;
+  margin: 10px 0;
+}
+
+.promptRadioContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 88px;
+  height: 42PX;
+  padding: 2px;
+  margin: 10px 0;
+  border: 1px solid rgb(253, 46, 46);
+  border-radius: 15px;
 }
 
 /* .modalRadioContainer label {
@@ -150,9 +166,9 @@
 	font-size: 14px;
 	text-align: center;
 	padding: 6px 0;
+  margin: none;
   width: 40px;
   height: 36px;
-	margin-right: -1px;
 	border: 1px solid rgba(0, 0, 0, 0.3);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
 	transition: all 0.1s ease-in-out;
@@ -167,7 +183,6 @@
 	padding: 6px 0;
   width: 40px;
   height: 36px;
-	margin-right: -1px;
   border: 1px solid rgba(121, 121, 121, 0.8);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
@@ -183,7 +198,6 @@
   padding: 6px 0;
   width: 40px;
   height: 36px;
-	margin-right: -1px;
 	border: 1px solid rgba(0, 0, 0, 0.3);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
 	transition: all 0.1s ease-in-out;
@@ -199,7 +213,6 @@
 	padding: 6px 0;
   width: 40px;
   height: 36px;
-	margin-right: -1px;
 	border: 1px solid rgba(121, 121, 121, 0.8);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
 	transition: all 0.1s ease-in-out;
@@ -225,17 +238,9 @@
   word-wrap: none;
 }
 
-.modalGuestInput {
-  padding: 6px 10px;
-  margin-top: 10px;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
+.numOfGuestsContainer{
   width: 140px;
 }
-/* .modalRadioBtn:checked + .modalRadioLabel {
-	background-color: #a5dc86;
-	box-shadow: none;
-} */
 
 .modalSpecialLabel {
   text-align: left;
