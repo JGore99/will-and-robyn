@@ -109,10 +109,6 @@ button:hover {
   margin-top: 12px;
 }
 
-input[type="radio"] {
-  margin: none;
-}
-
 h2 {
   font-size: var(--font-xxl);
   font-weight: 300;
