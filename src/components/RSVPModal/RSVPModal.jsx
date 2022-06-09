@@ -36,6 +36,11 @@ function RSVPModal ( { closeModal }) {
   const handleNo = (e) => {
     setYesChecked(false)
     setNoChecked(true)
+    // setFormData({
+    //   ...formData,
+    //   [setFormData]: 'no',
+    // })
+    setFormData.numberOfGuests(0)
   }
 
 const handleFormSubmit = (e) => {
@@ -43,7 +48,6 @@ const handleFormSubmit = (e) => {
     closeModal(false)
   } else {
     setBtnPressed(true)
-
   }
 }
 
@@ -65,7 +69,7 @@ const handleFormSubmit = (e) => {
         <form className={styles.modalForm}
           autoComplete='off'
         >
-          <label className={styles.modalFormLabel}>Name
+          <label className={styles.modalFormLabel}>Name *
             <input className={
               btnPressed && !fullName ? styles.promptFormInput : styles.modalFormInput }
               type='text'
@@ -75,12 +79,12 @@ const handleFormSubmit = (e) => {
               onChange={handleChange}
             />
             <h4 className={
-              btnPressed && !fullName ? styles.promptShown : styles.promptHidden }>*required
+              btnPressed && !fullName ? styles.promptShown : styles.promptHidden }>Name is required
             </h4>
           </label> 
           <div className={styles.attendingGuestsContainer}>
             <div className={styles.modalAttendingContainer}>
-              <h4 className={styles.modalAttendingLabel}>Attending?</h4>
+              <h4 className={styles.modalAttendingLabel}>Attending? *</h4>
               <div className={
                 btnPressed && !attending ? styles.promptRadioContainer : styles.modalRadioContainer }>
                 <label className={
@@ -112,11 +116,11 @@ const handleFormSubmit = (e) => {
                 </label> 
               </div>
               <h4 className={
-                btnPressed && !attending ? styles.promptShown : styles.promptHidden }>*required
+                btnPressed && !attending ? styles.promptShown : styles.promptHidden }>Answer is required
               </h4>
             </div> 
             <div className={styles.numOfGuestsContainer}>
-              <label className={styles.modalGuestLabel}>Number of guests
+              <label className={styles.modalGuestLabel}>Number of guests *
                 <input className={
                   btnPressed && !numberOfGuests ? styles.promptFormInput : styles.modalFormInput }
                   type='number'
@@ -126,7 +130,7 @@ const handleFormSubmit = (e) => {
                   onChange={handleChange}
                 />
                 <h4 className={
-                  btnPressed && !numberOfGuests ? styles.promptShown : styles.promptHidden }>*required
+                  btnPressed && !numberOfGuests ? styles.promptShown : styles.promptHidden }>Number is required
                 </h4>
               </label>
             </div>
