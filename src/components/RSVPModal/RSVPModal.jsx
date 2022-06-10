@@ -9,7 +9,7 @@ function RSVPModal ( { closeModal }) {
 
   const [formData, setFormData] = useState({
     fullName: '',
-    numberOfGuests: null,
+    numberOfGuests: 0,
     attending: '',
     commentsInstructions: ''
   })
@@ -51,7 +51,7 @@ const handleFormSubmit = (e) => {
 
   const isFormValid = () => {
     console.log("WORKING??", fullName, attending, numberOfGuests)
-    if ((fullName && attending && numberOfGuests !== null) || (fullName && !attending && numberOfGuests === null) || (fullName && !attending && numberOfGuests >= 0)){
+    if ((fullName && attending && numberOfGuests !== null) || (fullName && !attending)){
       console.log("SHOULD BE TRUE")
       return true
     } else {
@@ -124,9 +124,9 @@ const handleFormSubmit = (e) => {
                   type='number'
                   required
                   value={numberOfGuests}
+                  defaultValue={33}
                   name='numberOfGuests'
                   min={0}
-                  max={8}
                   onChange={handleChange}
                 />
                 <h4 className={
