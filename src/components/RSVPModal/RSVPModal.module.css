@@ -40,13 +40,13 @@
 }
 
 .promptHidden {
-  font-size: 12px;
+  font-size: 10px;
   visibility: hidden;
   margin: 0;
 }
 
 .promptShown {
-  font-size: 12px;
+  font-size: 10px;
   color:rgb(253, 46, 46);
   visibility: visible;
   margin: 0;
@@ -75,7 +75,7 @@
 .modalFormInput {
   width: 100%;
   padding: 6px 10px;
-  margin: 10px 0;
+  margin: 10px 0 6px 0;
   border: 1px solid #ddd;
   box-sizing: border-box;
   grid-column: 1 / 5;
@@ -84,7 +84,7 @@
 .promptFormInput {
   width: 100%;
   padding: 6px 10px;
-  margin: 10px 0;
+  margin: 10px 0 6px 0;
   background-color:rgb(245, 244, 244);
   border: 1px solid rgb(253, 46, 46);
   box-sizing: border-box;
@@ -120,7 +120,7 @@
 }
 
 .modalAttendingLabel {
-  text-align: center;
+  text-align: left;
   font-size: 16px;
   font-weight: 600;
   width: 100%;
@@ -134,7 +134,7 @@
   height: 42PX;
   padding: 2px;
   border: 1px solid rgb(255, 255, 255);
-  margin: 10px 0;
+  margin: 10px 0 6px 0;
 }
 
 .promptRadioContainer {
@@ -143,7 +143,7 @@
   width: 88px;
   height: 42PX;
   padding: 2px;
-  margin: 10px 0;
+  margin: 10px 0 6px 0;
   border: 1px solid rgb(253, 46, 46);
   border-radius: 15px;
 }

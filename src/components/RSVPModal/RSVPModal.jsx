@@ -22,9 +22,10 @@ function RSVPModal ( { closeModal }) {
   }
 
   const handleCheck = (e) => {
+    console.log(`(${fullName} && ${attending === false} && ${numberOfGuests === null})`)
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value === "true" ? true : false,
     })
   }
 
@@ -36,11 +37,6 @@ function RSVPModal ( { closeModal }) {
   const handleNo = (e) => {
     setYesChecked(false)
     setNoChecked(true)
-    // setFormData({
-    //   ...formData,
-    //   [setFormData]: 'no',
-    // })
-    setFormData.numberOfGuests(0)
   }
 
 const handleFormSubmit = (e) => {
@@ -55,9 +51,11 @@ const handleFormSubmit = (e) => {
 
   const isFormValid = () => {
     console.log("WORKING??", fullName, attending, numberOfGuests)
-    if (fullName && attending && numberOfGuests){
+    if ((fullName && attending && numberOfGuests !== null) || (fullName && !attending && numberOfGuests === null) || (fullName && !attending && numberOfGuests >= 0)){
+      console.log("SHOULD BE TRUE")
       return true
     } else {
+      console.log("SHOULD BE FALSE")
       return false
     }
   }
@@ -127,6 +125,8 @@ const handleFormSubmit = (e) => {
                   required
                   value={numberOfGuests}
                   name='numberOfGuests'
+                  min={0}
+                  max={8}
                   onChange={handleChange}
                 />
                 <h4 className={
