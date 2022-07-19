@@ -124,7 +124,6 @@ const handleFormSubmit = (e) => {
                   type='number'
                   required
                   value={numberOfGuests}
-                  defaultValue={33}
                   name='numberOfGuests'
                   min={0}
                   onChange={handleChange}
